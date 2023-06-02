@@ -1,13 +1,220 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+   --Light-red: hsl(0, 100%, 67%);
+   --Orangey-yellow: hsl(39, 100%, 56%);
+   --Green-teal: hsl(166, 100%, 37%);
+   --Cobalt-blue: hsl(234, 85%, 45%);
+   --Light-slate-blue-background: hsl(252, 100%, 67%);
+   --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+   --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+   --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+   --White: hsl(0, 0%, 100%);
+   --Pale-blue: hsl(221, 100%, 96%);
+   --Light-lavender: hsl(241, 100%, 89%);
+   --Dark-gray-blue: hsl(224, 30%, 27%);
 }
 
-.main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 100px;
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Hanken Grotesk", sans-serif;
+}
+
+.main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   max-width: 800px;
+   max-height: 800px;
+   box-shadow: 30px 30px 160px 26px var(--Light-lavender);
+   border-radius: 40px;
+   margin: 40px auto;
+}
+
+.result {
+   background-image: linear-gradient(
+      var(--Light-royal-blue-background),
+      var(--Light-slate-blue-background)
+   );
+   height: 600px;
+   width: 800px;
+   border-radius: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.summary {
+   background-color: var(--White);
+   height: 600px;
+   width: 800px;
+   border-radius: 40px;
+   display: flex;
+   flex-direction: column;
+}
+
+.result__subtitle {
+   font-size: 32px;
+   color: var(--Light-lavender);
+   font-weight: 500;
+}
+
+.result__value {
+   border: 1px solid transparent;
+   height: 40%;
+   width: 55%;
+   border-radius: 100%;
+   background-image: linear-gradient(
+      var(--Violet-blue-circle),
+      var(--Persian-blue-circle)
+   );
+}
+
+.strong__value {
+   font-size: 86px;
+   margin: 50px 0 0;
+   color: var(--White);
+}
+
+.result__value p {
+   color: var(--Light-lavender);
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.result__title {
+   color: var(--White);
+   font-size: 40px;
+}
+
+.result__text {
+   color: var(--Pale-blue);
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.summary__subtitle {
+   display: flex;
+   justify-content: flex-start;
+   margin: 50px 0 0 30px;
+   color: var(--Dark-gray-blue);
+   font-size: 32px;
+}
+
+.summary__list-item {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100vw;
+   max-width: 350px;
+   font-size: 18px;
+   margin-bottom: 24px;
+}
+
+.reaction {
+   color: var(--Light-red);
+   background-color: hsl(0, 100%, 67%, 10%);
+   border-radius: 12px;
+}
+
+.memory {
+   color: var(--Orangey-yellow);
+   background-color: hsl(39, 100%, 56%, 10%);
+   border-radius: 12px;
+}
+
+.verbal {
+   color: var(--Green-teal);
+   background-color: hsl(166, 100%, 37%, 10%);
+   border-radius: 12px;
+}
+
+.visual {
+   color: var(--Cobalt-blue);
+   background-color: hsl(234, 85%, 45%, 10%);
+   border-radius: 12px;
+}
+
+.text__list {
+   color: var(--Dark-gray-blue);
+}
+
+.summary__button {
+   width: 350px;
+   text-align: center;
+   margin: 10px auto;
+   padding: 20px;
+   border-radius: 30px;
+   color: var(--White);
+   background-color: var(--Dark-gray-blue);
+   border: none;
+   font-size: 18px;
+}
+
+@media screen and (max-width: 400px) {
+   .main {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .result {
+      width: 100vw;
+      height: 100vh;
+   }
+
+   .summary {
+      width: 100vw;
+      height: 100vh;
+      text-align: center;
+      margin: auto;
+      align-items: center;
+   }
+
+   .result__subtitle {
+      margin-bottom: 10;
+      font-size: 18px;
+      margin-top: 80px;
+   }
+
+   .result__value {
+      height: 200px;
+      width: 200px;
+   }
+
+   .result__title {
+      font-size: 32px;
+   }
+
+   .result__text {
+      font-size: 14px;
+      margin-bottom: 8px;
+   }
+
+   .strong__value {
+      font-size: 50px;
+   }
+
+   .result__value p {
+      font-size: 14px;
+   }
+
+   .summary__subtitle {
+      align-self: flex-start;
+   }
+   .summary__list-item {
+      max-width: 280px;
+      height: 60px;
+   }
+
+   .summary__button {
+      width: 250px;
+      font-size: 14px;
+      padding: 15px;
+   }
 }
